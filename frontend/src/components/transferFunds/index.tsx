@@ -34,10 +34,10 @@ const TransferFunds: React.FC<TransferFundsProps> = ({ setBalance }) => {
           if (error.response?.status === HttpStatusCode.BadRequest) {
             setMessage(error.response.data.error);
           } else {
-            setMessage("Failed to withdraw funds.");
+            setMessage("Failed to transfer funds.");
           }
         } else {
-          setMessage("Failed to deposit funds.");
+          setMessage("Failed to transfer funds.");
         }
       });
   };
