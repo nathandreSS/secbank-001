@@ -18,7 +18,7 @@ const Header: React.FC = () => {
         size={"2xl"}
         icon={faBuildingColumns}
       ></FontAwesomeIcon>
-      <button onClick={logout}>
+      <button data-testid="logout-button" onClick={logout}>
         <FontAwesomeIcon color={COLORS.secondary} icon={faRightFromBracket} />
         Logout
       </button>

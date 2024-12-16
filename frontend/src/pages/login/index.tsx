@@ -83,7 +83,7 @@ const Login: React.FC = () => {
           <button type="submit">Login</button>
           <p className="error-message">{error}</p>
           <p>
-            Don't have an account? <a href="/register">Register</a>
+            Don't have an account? <a data-testid="link-register" href="/register">Register</a>
           </p>
         </Form>
       </Formik>

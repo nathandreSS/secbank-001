@@ -69,13 +69,14 @@ const ActionSection: React.FC<ActionSectionProps> = ({
       <label>Amount</label>
       <input
         type="number"
+        data-testid={`${type}-amount-input`}
         value={amount}
         onChange={(event) => setAmount(parseFloat(event.target.value))}
       />
-      <button onClick={() => handleMap[type](amount)}>
+      <button data-testid={`${type}-button`} onClick={() => handleMap[type](amount)}>
         {type === "deposit" ? "Deposit" : "Withdraw"}
       </button>
-      <p className="error-message">{message}</p>
+      <p data-testid={`${type}-error-message`} className="error-message">{message}</p>
     </Container>
   );
 };

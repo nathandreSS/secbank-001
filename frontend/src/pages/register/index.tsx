@@ -47,9 +47,9 @@ const Register: React.FC = () => {
       <Formik
         initialValues={{ username: "", password: "", confirmPassword: "" }}
         initialErrors={{
-          username: "Campo Obrigatório",
-          password: "Campo Obrigatório",
-          confirmPassword: "Campo Obrigatório",
+          username: "Required Field",
+          password: "Required Field",
+          confirmPassword: "Required Field",
         }}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
@@ -67,6 +67,7 @@ const Register: React.FC = () => {
             <label>Username</label>
             <Field name="username" placeholder={"Username"} />
             <ErrorMessage
+              data-testid="username-field-error"
               name="username"
               component="div"
               className="field-error"
@@ -76,6 +77,7 @@ const Register: React.FC = () => {
             <label>Password</label>
             <Field type="password" name="password" placeholder="Password" />
             <ErrorMessage
+                data-testid="password-field-error"
               name="password"
               component="div"
               className="field-error"
@@ -85,10 +87,11 @@ const Register: React.FC = () => {
             <label>Confirm Password</label>
             <Field
               type="password"
-              name={"confirmPassword"}
-              placeholder={"Confirm Password"}
+              name="confirmPassword"
+              placeholder="Confirm Password"
             />
             <ErrorMessage
+              data-testid="confirm-password-field-error"
               name="confirmPassword"
               component="div"
               className="field-error"
@@ -97,7 +100,7 @@ const Register: React.FC = () => {
           <button type="submit">Register</button>
           <p className="error-message">{error}</p>
           <p>
-            Already have an account? <a href={ROUTES.login}>Login</a>
+            Already have an account? <a data-testid="link-register" href={ROUTES.login}>Login</a>
           </p>
         </Form>
       </Formik>

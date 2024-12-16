@@ -19,7 +19,7 @@ SecBank is a mock banking application created for educational purposes. This pro
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/nathandreSS/secbank-001.git
+    git clone https://github.com/your-username/secbank.git
     cd secbank-001
     ```
 

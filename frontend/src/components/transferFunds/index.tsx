@@ -47,6 +47,7 @@ const TransferFunds: React.FC<TransferFundsProps> = ({ setBalance }) => {
         <div>
           <label>Account Id:</label>
           <input
+              data-testid="account-input"
             type="text"
             onChange={(event) => setAccountId(event.target.value)}
           />
@@ -54,6 +55,7 @@ const TransferFunds: React.FC<TransferFundsProps> = ({ setBalance }) => {
         <div>
           <label>Description:</label>
           <input
+              data-testid="description-input"
             type="text"
             onChange={(event) => setDescription(event.target.value)}
           />
@@ -61,12 +63,13 @@ const TransferFunds: React.FC<TransferFundsProps> = ({ setBalance }) => {
         <div>
           <label>Amount:</label>
           <input
+              data-testid="transfer-amount-input"
             type="number"
             onChange={(event) => setAmount(parseFloat(event.target.value))}
           />
         </div>
-        <button type="submit">Transfer</button>
-        <p className="error-message">{message}</p>
+        <button data-testid="transfer-button" type="submit">Transfer</button>
+        <p data-testid="transfer-error-message" className="error-message">{message}</p>
       </form>
     </Container>
   );
